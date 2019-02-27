@@ -1,0 +1,15 @@
+<section id="galeria" class="white">
+	<div class="container">
+	<h1 class="fore-gray text-center">GALERIA</h1>
+			<div class="row">
+			<img src="img/sombra-top.png" class="img-responsive">
+
+					<div class="col-md-2 col-sm-3 col-xs-4" ng-show="album.portada == 1" ng-repeat="album in albumes" >
+            <a href="img/clientes/{{album.imagen}}.jpg" data-lightbox="{{album.nombre}}" data-title="{{album.titulo}}">
+						        <img src="img/clientes/{{album.imagen}}.jpg" class="img-responsive">
+            </a>
+					</div>
+			<img src="img/sombra-bottom.png" class="img-responsive">
+			</div>
+	</div>
+</section>

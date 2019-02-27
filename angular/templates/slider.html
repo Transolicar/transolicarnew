@@ -1,0 +1,58 @@
+<section id="inicio" class="slider">
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+
+
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	 <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="img/sliders/slider1.jpg" class="img-responsive center-block">
+	    </div>
+
+	    <div class="item">
+	      <img src="img/sliders/slider1.jpg" class="img-responsive center-block">
+	    </div>
+ </div>
+	  <!-- Left and right controls -->
+
+
+	  <a class="left carousel-control" href="#myCarousel" data-target="#myCarousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#myCarousel" data-target="#myCarousel" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+	<script>
+	$("a.carousel-control").click(function(e){
+	    e.preventDefault();
+	    $(this).parent().carousel($(this).data("slide"));
+	});
+
+	</script>
+
+		<div class="row base">
+
+
+
+				<p  class=" text-center hidden-xs">
+				<img src="img/sbs.jpg" align="absmiddle" style="width: 60px;"> <strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
+				</p>
+
+				<p  class=" text-center hidden-md hidden-lg hidden-sm">
+				<img src="img/sbs.jpg" align="absmiddle" style="width: 100px; margin-bottom:5px;"><br><strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
+				</p>
+
+
+		</div>
+</section>

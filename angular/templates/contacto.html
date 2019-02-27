@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<section id="contacto" class="contacto back-red-light menos-50-0">
+
+    <img src="img/contacto.png" class="img-responsive img-max-60 right-block ">
+</section>
+<div sincosto></div>
+<div class="section opensans padding-bottom-30 padding-top-30" style="margin-bottom: 30px;">
+
+
+        <div class="row padding-bottom-30 padding-top-30 " style="margin:0;">
+           <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <br><br>
+                 <form >
+                 <div class="col-md-12 margin-top-10 margin-top-10">
+                     <h5 class="{{alerta}}">{{msg}}</h5>
+                </div>
+                <div class="col-md-6 margin-top-10 margin-top-10">
+                    <div class="forma">
+                        Nombre <input type="text"  ng-model="formaD.nombre"  />
+                    </div>
+                </div>
+                <div class="col-md-6 margin-top-10 margin-top-10">
+                    <div class="forma">
+                    Correo <input type="email"  ng-model="formaD.ema" ng-blur="validar($event)"   />
+                    <i class="fa fa-{{msgemail}}" ng-class="alertemail"></i>
+                     </div>
+                </div>
+                <div class="col-md-12 margin-top-10 margin-top-10">
+                    <div class="forma">
+                    Asunto <input type="text"  ng-model="formaD.asunto" />
+                    </div>
+                </div>
+                <div class="col-md-12 margin-top-10 margin-top-10">
+                    <div class="formatext">
+                    <textarea ng-model="formaD.comentario"></textarea>
+                    </div>
+                </div>
+                  <div class="col-md-6 margin-top-10 margin-top-10">
+                      <input type="checkbox" ng-model="formaD.terminos" required/>
+                      <a data-toggle="modal" data-target="#terminos" class="no-a"> Acepto términos y condiciones</a>
+                </div>
+                <div class="col-md-6 margin-top-10 margin-top-10 text-right">
+                    <button type="button" class="btn btn-azul-neutro" ng-click="enviar()">ENVIAR</button>
+                </div>
+                </form>
+
+                <br>
+
+                <div class="row margin-top-10">
+                  <div class="col-md-2 hidden-sm hidden-xs">
+
+                  </div>
+                    <div class="col-md-2 col-sm-3 col-xs-3 ">
+                      <img src="img/certificaciones/1.png" class="img-responsive center-block">
+                    </div>
+                     <div class="col-md-2 col-sm-3 col-xs-3">
+                      <img src="img/certificaciones/2.png" class="img-responsive center-block">
+                    </div>
+                     <div class="col-md-2 col-sm-3 col-xs-3">
+                      <img src="img/certificaciones/3.png" class="img-responsive center-block">
+                    </div>
+                     <div class="col-md-2 col-sm-3 col-xs-3">
+                      <img src="img/certificaciones/4.png" class="img-responsive center-block margin-top-10">
+                    </div>
+                    <div class="col-md-2 hidden-sm hidden-xs">
+
+                      </div>
+                </div>
+            </div>
+            <div class="col-md-6 back-azul-neutro">
+
+               <div class="row">
+
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="bucaramanga">
+
+                    <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                    <h2 class="fore-white text-center" style="margin-top: 0;">BUCARAMANGA</h2>
+                    <p class="text-center fore-white"> Tel: 6915342- 6186841– 317 437 5730<br>
+                    Km. 2 Anillo vial Floridablanca – Girón Centro<br>
+                    empresarial NATURA Torre 1 Oficina 202</p>
+
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="santa marta">
+
+                     <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">SANTA MARTA</h2>
+                      <p class="text-center fore-white"> Tel: 317 367 2535 – 317 431 4595<br>
+                        Km. 15 vía alterna ruta del sol<br>
+                        ZEDE S.A.S. oficina 106</p>
+
+
+                  </div>
+
+                  <div class="col-md-4 hidden-xs hidden-sm btn-local" data-place="cucuta">
+
+                      <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">CÚCUTA</h2>
+                      <p class="text-center fore-white"> Cel. 316 482 1563<br>
+                        Anillo vial oriental 3n 31 portal de bocono local 1<br>
+                      </p>
+
+                  </div>
+
+               </div>
+      <div class="row hidden-lg hidden-md">
+
+                 <div class="col-md-4 col-xs-6 col-sm-6 btn-local" data-place="cucuta">
+
+                    <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">CÚCUTA</h2>
+                      <p class="text-center fore-white"> Cel. 316 482 1563<br>
+                      Anillo vial oriental 3n 31 portal de bocono local 1<br>
+                      </p>
+
+                  </div>
+
+
+                   <div class="col-md-4 col-xs-6 col-sm-6 btn-local" data-place="barranquilla">
+
+                   <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">BARRANQUILLA</h2>
+                      <p class="text-center fore-white"> Tel: 317 431 3619 <br>
+                        Calle 4a #30-351 Ofic. 3<br>
+                       Frente a la sociedad portuaria.</p>
+
+
+                  </div>
+
+
+      </div>
+
+
+
+                     <div class="row">
+
+                  <div class="col-md-4 hidden-xs hidden-sm btn-local" data-place="barranquilla">
+
+                     <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">BARRANQUILLA</h2>
+                      <p class="text-center fore-white"> Tel: 317 431 3619 <br>
+                        Calle 4a #30-351 Ofic. 3<br>
+                        Frente a la sociedad portuaria.</p>
+
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="cartagena">
+
+                     <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">CARTAGENA</h2>
+                      <p class="text-center fore-white"> Cel: 318 349 3134<br>diagonal 21 45a-11 local 107
+</p>
+
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="bogota">
+
+                    <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">BOGOTÁ</h2>
+                      <p class="text-center fore-white"> Cel. 317 430 3506 – 317 648 6578<br>km3.8 vía Funza Siberia municipio de Funza parque industrial el trébol local 7b <br>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="medellin">
+
+                    <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">MEDELLIN</h2>
+                      <p class="text-center fore-white"> Cel. 317 668 3485<br>carrera 52d 77-67 local 1209 cc platino Itagüí<br>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-6 btn-local" data-place="buenaventura">
+
+                    <img src="img/carretera.png" class="img-responsive center-block" style="max-width: 100px;" />
+                      <h2 class="fore-white text-center" style="margin-top: 0;">BUENAVENTURA</h2>
+                      <p class="text-center fore-white"> Cel. 316 239 3405<br>km 12 vía alterna interna centracar–<br>
+                  </div>
+               </div>
+
+            </div>
+
+
+
+        </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div id="terminos" class="modal fade" role="dialog" >
+  <div class="modal-dialog" style="margin-top:100px;">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h5 class="modal-title">Politicas de privacidad y protección de datos</h5>
+        <h5 class="modal-title">LEY DE PROTECCIÓN DE DATOS PERSONALES</h5>
+      </div>
+      <div class="modal-body">
+        <p>En cumplimiento con la Ley 1581 y su Decreto Reglamentario 1377 de 2013,
+            Transolicar S.A.S, informa a sus empleados, clientes, proveedores, inscritos,
+            y a la comunidad en general, que la compañía cuenta con una base de datos
+            en la cual almacena y recolecta datos con el fin informar sucesos importantes
+            de nuestra compañía y crear una relación más eficiente con ustedes nuestros clientes.</p>
+        <p>De conformidad con la normatividad antes mencionada, usted está en derecho de conocer,
+            actualizar y solicitar la rectificación o eliminación de la información que tenemos
+            en nuestra base de datos como los es: Nombre, cargo, dirección, empresa, teléfono
+            y correo electrónico, para lo cual podrá enviar una comunicación escrita al correo
+            contacto@transolicar.com después de leer esta información.</p>
+        <p>En caso de que no se reciba dicha comunicación, está aceptando que Transolicar S.A.S use sus datos
+            registrados para almacenar, usar, circular, suprimir, agrupar, actualizar y disponer
+            de los mismos en nuestra base de datos sin perjuicios de su facultad de ejercer
+            en cualquier momento sus derechos.</p>
+        <p>Siéntase en la libertad de solicitar cualquier información, cuenta con nuestro apoyo
+            y acompañamiento para cumplir sus retos.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="localidad" class="modal fade" role="dialog">
+    <div class="modal-dialog  modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>

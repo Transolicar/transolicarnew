@@ -1,0 +1,69 @@
+/* Extra-Small devices (mobiles, 768px and up) */
+@media (max-width: 768px) {
+
+    .text-xs-justify {
+      text-align: justify;
+    }
+    .text-xs-center {
+      text-align: center;
+    }
+    .text-xs-left {
+      text-align: left;
+    }
+    .text-xs-right{
+      text-align: right;
+    }
+
+}
+
+/* Small devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+
+
+      .text-sm-justify {
+        text-align: justify;
+      }
+      .text-sm-center {
+        text-align: center;
+      }
+      .text-sm-left {
+        text-align: left;
+      }
+      .text-sm-right{
+        text-align: right;
+      }
+
+  }
+
+/* Medium devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .text-md-justify {
+      text-align: justify;
+    }
+    .text-md-center {
+      text-align: center;
+    }
+    .text-md-left {
+      text-align: left;
+    }
+    .text-md-right {
+      text-align: right;
+    }
+  }
+
+/* Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .text-lg-justify {
+      text-align: justify;
+    }
+    .text-lg-center {
+      text-align: center;
+    }
+    .text-lg-left {
+      text-align: left;
+    }
+    .text-lg-right {
+      text-align: right;
+    }
+
+  }

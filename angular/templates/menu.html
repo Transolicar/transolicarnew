@@ -1,0 +1,123 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top height100" role="navigation">
+      <div class="container container-menu height100">
+        <div class="navbar-header height100">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a ng-click="colapseMenu()" du-smooth-scroll du-scrollspy offset="50" class="navbar-brand height100" href="#inicio">
+                <img src="img/logo final-02.png" class="img-responsive height100">
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse minheight100">
+
+            <ul class="nav navbar-nav navbar-right">
+
+             <li >
+                <a href="#nosotros" du-smooth-scroll du-scrollspy offset="50" ng-class="nosactivo" ng-click="colapseMenu()">
+                  Quienes somos
+                </a>
+            </li>
+            <li>
+                <a  href="#servicios" du-smooth-scroll du-scrollspy offset="50" ng-click="colapseMenu()" ng-class="seractivo">
+                   Servicios
+                </a>
+            </li>
+           <li>
+              <a href="#preguntas" du-smooth-scroll du-scrollspy offset="50" ng-click="colapseMenu()"  ng-class="tesactivo">
+                Preguntas frecuentes
+              </a>
+            </li>
+
+             <li>
+              <a ng-click="colapseMenu()" data-toggle="modal" data-target="#myModal">
+                Políticas
+              </a>
+            </li>
+
+            <li>
+              <a href="#contacto" du-smooth-scroll du-scrollspy offset="50" ng-click="colapseMenu()" ng-class="conactivo">
+                Contacto
+              </a>
+            </li>
+            <li>
+              <a href="/modulo" ng-click="colapseMenu()">
+                Iniciar Sesión
+              </a>
+            </li>
+          </ul>
+
+
+
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+<style type="text/css">
+
+.seguimiento{
+
+    position: fixed;
+    left: 0;
+    top: 20%;
+    background: #008080;
+    color: white;
+    padding: 10px;
+    /* border: 1px solid white; */
+    /* border-left: 0; */
+    box-shadow: 1px 5px 5px ##FFFFFF;
+    cursor: pointer;
+
+}
+
+
+</style>
+<a href="https://www.destinoseguro.net/scl/index.php" target="_blank"><div class="seguimiento" title="Seguimiento Destino Seguro">
+
+<i class="fa fa-location"></i> <strong> Monitoreo </strong>
+
+<!--
+<style  type="text/css">
+
+.facebook{
+
+  position: fixed;
+  left: 0;
+  top: 25%;
+  background: #0060ab;
+  color: white;
+  padding: 10px;
+  /* border: 1px solid white; */
+  /* border-left: 0; */
+  box-shadow: 3px 7px 7px #FFFFFF;
+  cursor: pointer;
+
+}
+</style>
+
+<a href="https://www.facebook.com/" target="_blank"><div class="facebook" title="cuenta de facebook">
+
+<i class="fab fa-facebook-square"></i> <strong> Facebook </strong>
+
+
+<style  type="text/css">
+
+.Twitter{
+  position: fixed;
+  left: 0;
+  top: 30%;
+  background: #00FFFF;
+  color: white;
+  padding: 10px;
+  /* border: 1px solid white; */
+  /* border-left: 0; */
+  box-shadow: 2px 6px 6px #FFFFFF;
+  cursor: pointer;
+  }
+</style>
+
+<a href="https://twitter.com/" target="_blank"><div class="Twitter" title="cuenta de Twitter">
+
+<i class="fab fa-twitter-square"></i> <strong>Twitter</strong>
+-->

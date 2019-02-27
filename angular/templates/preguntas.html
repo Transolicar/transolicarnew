@@ -1,0 +1,318 @@
+<section class="white" id="preguntas">
+	
+  <img src="img/preguntas.png" class="img-responsive img-max-60 right-block" style="margin-top: 80px; margin-bottom: 20px;">
+<script type="text/javascript">
+	
+
+	$('#preguntas-carousel').owlCarousel({
+		items: 3,
+		itemsDesktop: false,
+		itemsDesktopSmall: false,
+		itemsTablet: [980,3],
+		itemsTabletSmall: [767,2],
+		itemsMobile: [479,1],
+		navigation: true,
+		navigationText: ['<i class="glyphicon glyphicon-chevron-left"></i>','<i class="glyphicon glyphicon-chevron-right"></i>'],
+		pagination: false
+  });
+
+
+</script>
+
+<style>
+
+
+/**/
+/* preguntas carousel */
+/**/
+.preguntas-carousel img {
+  display: block;
+}
+.preguntas-carousel h3 {
+  position: relative;
+  padding-top: 10px;
+  font-size: 17px;
+  line-height: 23px;
+  color: #000;
+  -o-transition: background 0.3s, color 0.3s;
+  -ms-transition: background 0.3s, color 0.3s;
+  -moz-transition: background 0.3s, color 0.3s;
+  -webkit-transition: background 0.3s, color 0.3s;
+}
+.preguntas-carousel p {
+  position: relative;
+  padding-bottom: 15px;
+  line-height: 18px;
+  -o-transition: background 0.3s, color 0.3s;
+  -ms-transition: background 0.3s, color 0.3s;
+  -moz-transition: background 0.3s, color 0.3s;
+  -webkit-transition: background 0.3s, color 0.3s;
+}
+.preguntas-carousel .pic {
+  position: relative;
+}
+.preguntas-carousel .links {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+  opacity: 0;
+  -o-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s; 
+}
+.preguntas-carousel .links ul {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -28px;
+  text-align: center;
+  font-size: 0;
+}
+.preguntas-carousel .links li {
+  position: relative;
+  display: inline-block;
+  margin: 0 8px;
+  opacity: 0;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -webkit-transition: opacity 0.4s;
+}
+.preguntas-carousel .links a, .preguntas .links a{
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.5);
+  font-size: 20px;
+  line-height: 50px;
+  color: #fff;
+}
+@media screen and (max-width:1190px){
+  .preguntas-carousel .links a, .preguntas .links a{
+    display:block;
+    width:46px;
+    height:46px;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.5);   
+    font-size: 18px;
+    line-height: 46px;
+  } 
+
+}
+.preguntas-carousel .item {
+  position: relative;
+}
+.preguntas-carousel .item:hover h3,
+.preguntas-carousel .item:hover p {
+  color: #fff;
+}
+.preguntas-carousel .item:hover .links {
+  opacity: 1;
+}
+.preguntas-carousel .item:hover .links li {
+  opacity: 1;
+  -ms-animation-name: slideup;
+  -ms-animation-duration: 0.4s;
+  -moz-animation-name: slideup;
+  -moz-animation-duration: 0.4s;
+  -webkit-animation-name: slideup;
+  -webkit-animation-duration: 0.4s;
+}
+.preguntas-carousel .owl-carousel {
+  width: auto;
+  margin: 0 -15px;
+  -webkit-user-select: none;
+}
+.preguntas-carousel .owl-item {
+  padding: 0 15px;
+  text-align: center;
+  -ms-box-sizing:border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.preguntas-carousel .owl-controls {
+  right: 15px;
+}
+@media screen and (max-width: 1190px) { /* laptop */
+  .preguntas-carousel img {
+    width: 100%;
+    height: auto;
+  }
+  .preguntas-carousel .owl-carousel {
+    margin: 0 -10px;
+  }
+  .preguntas-carousel .owl-item {
+    padding: 0 10px;
+  }
+  .preguntas-carousel .owl-controls {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 980px) { /* pad */
+  .preguntas-carousel .owl-carousel {
+    margin: 0 -9px;
+  }
+  .preguntas-carousel .owl-item {
+    padding: 0 9px;
+  }
+  .preguntas-carousel .owl-controls {
+    right: 9px;
+  }
+}
+
+
+.owl-prev{
+	
+	float:left;
+
+}
+
+.glyphicon{
+	
+	color: white;
+	background:#0072BC;
+	padding: 5px;
+    margin: 5px;
+ 
+}
+
+.top-item{
+  
+  color:white;
+  background:#0072BC;
+  border:none 0px #000000;
+-moz-border-radius-topleft: 32px;
+-moz-border-radius-topright:0px;
+-moz-border-radius-bottomleft:0px;
+-moz-border-radius-bottomright:0px;
+-webkit-border-top-left-radius:32px;
+-webkit-border-top-right-radius:0px;
+-webkit-border-bottom-left-radius:0px;
+-webkit-border-bottom-right-radius:0px;
+border-top-left-radius:32px;
+border-top-right-radius:0px;
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+-moz-box-shadow: 0px 4px 14px #000000;
+-webkit-box-shadow: 0px 4px 14px #000000;
+box-shadow: 0px 4px 14px #000000;
+padding: 15px;
+text-align:center;
+font-size:20px;
+z-index: 99;
+min-height:115px;
+
+}
+
+
+.body-item{
+  
+background:#5D5D5D;
+color:white;
+padding: 15px;
+text-align:left;
+min-height:250px;
+
+}
+
+</style>
+	<div class="container preguntas-carousel">
+
+		
+    <div id="preguntas-carousel" class="owl-carousel">
+   
+							<div class="item" >
+								<div class="top-item">
+                  ¿QUÉ NO DEBE OLVIDAR EL CONDUCTOR BAJO LA LLUVIA?
+                </div>
+                <div class="body-item">
+                    <ul>
+                          <li>Mantener limpio el parabrisas.</li>
+                          <li>Disminuir la velocidad y evitar mojar a los peatones.</li>
+                          <li>Encender las luces.</li>
+                          <li>Verificar que los neumáticos estén en buenas condiciones.</li>
+                          <li>No realizar movimientos bruscos ya que el agua reduce la adherencia de las llantas sobre el asfalto un 50%</li>
+                          <li>Aumentar la distancia vehicular.</li>
+                          <li>Anticipar la frenada</li>
+                    </ul>
+                </div>
+							</div>
+
+              <div class="item" >
+                <div class="top-item text-uppercase">
+                  ¿Qué requisitos debo tener en cuenta para abrir una hoja de vida?
+                </div>
+                <div class="body-item">
+                    <ul>
+                      <li>Cédula.</li>
+                      <li>Pase.</li>
+                      <li>Licencia de conducción</li>
+                      <li>Referencias laborales y personales</li>
+                      <li>Pago seguridad social y ARL</li>
+                      <li>Formato habeas data</li>
+                      <li>Presentarse en la oficina principal para el registro de huellas u toma de fotos</li>                
+                    </ul>
+                </div>
+              </div>
+
+
+               <div class="item" >
+                <div class="top-item text-uppercase">
+                  ¿Cómo realizar la solicitud de pronto pago?
+                </div>
+                <div class="body-item">
+                <p>Formato de autorización de pronto pago diligenciado a mano autenticado con firma y huella del propietario o poseedor actual de vehículo</p>
+                    <ul>
+                      <li>RUT</li>
+                      <li>Certificación bancaria</li>
+                      <li>Formato habeas data</li>
+                      <li>Cédula</li>           
+                    </ul>
+                </div>
+              </div>
+        
+
+               <div class="item" >
+                <div class="top-item text-uppercase">
+                 ¿Qué documentos debo presentar al realizar un cumplido?
+                </div>
+                <div class="body-item">
+                    <ul>
+                      <li>Manifiesto de carga</li>
+                      <li>Remesa de carga</li>
+                      <li>Hoja de reporte</li>
+                      <li>Tiquetes de basura de salida y  de llegada</li>
+                      <li>Ficha de inspección pre operacional</li>           
+                    </ul>
+                </div>
+              </div>
+
+
+               <div class="item" >
+                <div class="top-item text-uppercase">
+                 ¿Qué requisitos debo tener en cuenta para abrir hoja de vida en un vehículo?
+                </div>
+                <div class="body-item">
+                    <ul>
+                      <li>Tarjeta de propiedad</li>
+                      <li>Soat vigente</li>
+                      <li>Revisión técnico mecánica vigente</li>
+                      <li>Tarjeta del trayler</li>
+                      <li>3 fotos de vehículo: frontal lateral y del trayler</li>
+                    </ul>
+                </div>
+              </div>
+
+
+          
+		</div>
+			
+
+	</div>
+
+
+</section>
