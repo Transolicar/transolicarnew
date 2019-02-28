@@ -1,10 +1,6 @@
  <?php 
-
 $rol = $_GET['rol']; 
 $clave = $_GET['clave']; 
-
-
-
  $or = "";
 
     switch($rol){
@@ -25,9 +21,9 @@ $clave = $_GET['clave'];
       require('conectar.php');
 
       $sql = "SELECT * FROM usuarios where (cedula LIKE '%".$clave."%' or nombre LIKE '%".$clave."%') and (rol = ".$rol." $or) ";
-      $datos = mysql_query($sql,$c);
+      $datos = mysqli_query($c,$sql);
 
-        if (mysql_num_rows($datos) == 0){
+        if (mysqli_num_rows($datos) == 0){
 
           $cadena = "No hay resultados para su busqueda."; 
 
@@ -37,7 +33,7 @@ $clave = $_GET['clave'];
                $cadena = "<table class='table'>
       <tr><td>Cédula o NIT</td><td>Nombre</td><td></td></tr>";
 
-     while($ren = mysql_fetch_array($datos)){
+     while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
        $cadena = $cadena ."<tr>
        <td>".$ren['cedula'] ."</td>

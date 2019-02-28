@@ -1,54 +1,36 @@
 <?php
 
 function get_titulo ($rol){
-
      require('conectar.php');
-
      $sql = "SELECT * FROM roles where tipo = ".$rol."";
-     $datos = mysql_query($sql,$c);
-
-     while($ren = mysql_fetch_array($datos)){
-
+     $datos = mysqli_query($c,$sql);
+     while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
         $rol_name = $ren['nombre'];
-
-
      }
-
      return $rol_name;
 }
 
-
-
-
-
-
 function get_tipos($usuario){
 
-
       require('conectar.php');
-
       $sql = "SELECT * FROM documentos where id_usuario = ".$usuario."";
-      $datos = mysql_query($sql,$c);
+      $datos = mysqli_query($c,$sql);
 
       $cadena = "<div class='section' style='width:90%; margin-left:5%;'><div class='row' style='min-height:50%;'>";
 
 
                         $keyt = 0;
 
-                        if(mysql_num_rows($datos) == 0){
+                        if(mysqli_num_rows($datos) == 0){
 
                               $cadena =   $cadena . "<h1 class='azul'>No hay documentos registrados.</h1>";
 
                         }else{
 
-
-                                while($ren = mysql_fetch_array($datos)){
-
+                                while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
                                    $arrayTipo[$keyt] = $ren['id_tipo'];
                                    $keyt++;
-
                                 }
-
 
                                 $arrayTipo = array_unique($arrayTipo);
 
@@ -79,23 +61,13 @@ function get_tipos($usuario){
 }
 
 function tipo($id){
-
     require('conectar.php');
-
     $sql = "SELECT * FROM tipo where id = ".$id."";
-    $datos = mysql_query($sql,$c);
-
-    while($ren = mysql_fetch_array($datos)){
-
+    $datos = mysqli_query($c,$sql);
+    while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
        $tipo_name = $ren['nombre'];
-
-
     }
-
     return $tipo_name;
-
-
-
 }
 
 
@@ -258,9 +230,9 @@ function buscar(evt){
                 require('conectar.php');
 
                 $sql = "SELECT * FROM usuarios where rol = ".$perfil." $or";
-                $datos = mysql_query($sql,$c);
+                $datos = mysqli_query($c,$sql);
 
-                while($ren = mysql_fetch_array($datos)){
+                while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
                 $cadena = $cadena. '<tr>
 
@@ -303,9 +275,9 @@ function cuentaArchivos($id){
   require('conectar.php');
 
   $sql = "SELECT * FROM documentos where id_usuario = ".$id."";
-  $datos = mysql_query($sql,$c);
+  $datos = mysqli_query($c,$sql);
 
-  $numero = mysql_num_rows($datos);
+  $numero = mysqli_num_rows($datos);
 
   return $numero;
 
@@ -604,11 +576,11 @@ function get_usuario($id, $opcion){
     require('conectar.php');
 
     $sql = "SELECT * FROM usuarios where id = ".$id."";
-    $datos = mysql_query($sql,$c);
+    $datos = mysqli_query($c,$sql);
 
 
 
-   while($ren = mysql_fetch_array($datos)){
+   while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
      switch ($opcion) {
        case 1:
@@ -654,11 +626,11 @@ $or = "";
         require('conectar.php');
 
         $sql = "SELECT * FROM tipo where rol = ".$rol." $or";
-        $datos = mysql_query($sql,$c);
+        $datos = mysqli_query($c,$sql);
 
         $cadena = "<select name='tipo' required class='form-control'><option value> - Seleccione - </option>";
 
-       while($ren = mysql_fetch_array($datos)){
+       while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
 
          $cadena = $cadena ."<option value='".$ren['id']."'>".ucfirst($ren['nombre']) ."</option>";
@@ -733,12 +705,12 @@ function get_usuarios($rol){
       require('conectar.php');
 
       $sql = "SELECT * FROM usuarios where rol = ".$rol."";
-      $datos = mysql_query($sql,$c);
+      $datos = mysqli_query($c,$sql);
 
       $cadena = "<select name='usuario' required class='form-control'>
                   <option value> - Seleccione - </option>";
 
-     while($ren = mysql_fetch_array($datos)){
+     while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
        $cadena = $cadena ."<option value='".$ren['id']."'>".ucfirst($ren['nombre']) ." -  ".$ren['cedula'] ."</option>";
 
@@ -778,12 +750,12 @@ function get_usuarios_list($rol, $multiple, $cantidad){
       require('conectar.php');
 
       $sql = "SELECT * FROM usuarios where rol = ".$rol." $or";
-      $datos = mysql_query($sql,$c);
+      $datos = mysqli_query($c,$sql);
 
       $cadena = "<table class='table' id='tabla_dinamica'>
       <tr><td>Cédula o NIT</td><td>Nombre</td><td></td></tr>";
 
-     while($ren = mysql_fetch_array($datos)){
+     while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
        $cadena = $cadena ."<tr>
        <td>".$ren['cedula'] ."</td>
@@ -820,9 +792,9 @@ $tipo_str = "id_tipo = ".$tipo." and ";
   }
 
   $sql = "SELECT * FROM documentos where ".$tipo_str." id_usuario = ".$usuario." order by ano,mes DESC";
-  $datos = mysql_query($sql,$c);
+  $datos = mysqli_query($c,$sql);
 
-  if(mysql_num_rows($datos) == 0){
+  if(mysqli_num_rows($datos) == 0){
 
       $cadena = '<p>No se han encontrado archivos.</p>
     <button class="btn btn-info" onclick="window.history.back()">Volver</button>';
@@ -832,7 +804,7 @@ $tipo_str = "id_tipo = ".$tipo." and ";
 
     
 
-      while($ren = mysql_fetch_array($datos)){
+      while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
          $cadena = $cadena . '<div class="col-md-3"><ul class="media-list">';
          
@@ -916,7 +888,7 @@ function delete_user_archivo($id_archivo,$id_usuario){
 //exit();
   $sql = "DELETE FROM documentos where id_usuario = ".$id_usuario." and id =".$id_archivo;
 
-  $datos = mysql_query($sql,$c);
+  $datos = mysqli_query($c,$sql);
   return true;
  
 }
@@ -935,14 +907,14 @@ $tipo_str = "id_tipo = ".$tipo." and ";
   }
 
   $sql = "SELECT * FROM documentos where ".$tipo_str." id_usuario = ".$usuario." order by ano,mes DESC";
-  $datos = mysql_query($sql,$c);
+  $datos = mysqli_query($c,$sql);
 
   $cadena = '<form>';
   $keyano = 0;
   $keymes = 0;
   $keytipo = 0; 
 
- while($ren = mysql_fetch_array($datos)){
+ while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
         if(!$tipo){
 
@@ -1058,11 +1030,11 @@ function delete_user($id){
  require('conectar.php');
 
   $sql = "SELECT * FROM documentos where id_usuario = ".$id;
-  $datos = mysql_query($sql,$c);
+  $datos = mysqli_query($c,$sql);
 
    	$arrayElemetos =  array();
 
-   while($ren = mysql_fetch_array($datos)){
+   while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
    	$arrayElemetos[] = $ren['link'];
 
@@ -1071,10 +1043,10 @@ function delete_user($id){
 		if(count($arrayElemetos)>0){
 
 			$sql2 = "DELETE FROM usuarios where id = ".$id;
-  			if(mysql_query($sql2,$c)){
+  			if(mysqli_query($c,$sql2)){
 
   					$sql3 = "DELETE FROM documentos where id_usuario = ".$id;
-  					mysql_query($sql3,$c);
+  					mysqli_query($c,$sql3);
 
   					foreach ($arrayElemetos as $value) {
   						
@@ -1095,7 +1067,7 @@ function delete_user($id){
 
 
       $sql2 = "DELETE FROM usuarios where id = ".$id;
-        if(mysql_query($sql2,$c)){
+        if(mysqli_query($c,$sql2)){
 
 
             return true;

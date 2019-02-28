@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 $tipo_rol = 0;
 
@@ -7,9 +6,9 @@ require('conectar.php');
 
 $sql = "SELECT * FROM usuarios where correo = '".$_SESSION['transolicar']."'";
 
-$datos = mysql_query($sql,$c);
+$datos = mysqli_query($c,$sql);
 
-      while($ren = mysql_fetch_array($datos)){
+      while($ren = mysqli_fetch_array($datos, MYSQLI_ASSOC)){
         $rol = $ren['rol'];
         $usuario = $ren['id'];
         if($ren['rol'] != $tipo_rol){
@@ -21,7 +20,6 @@ $datos = mysql_query($sql,$c);
       }
 
  ?>
-
 
 <html>
 

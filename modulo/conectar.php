@@ -1,15 +1,11 @@
-<?
-
+<?php
 $u = "transolicar_user";
-$p = "Transolicar2016!";
+$p = "*!shtKQZgHbn_}7v";
 $s = "localhost";
 
- $c = mysql_connect($s,$u,$p);
-
- mysql_select_db("transolicar", $c) or die (mysql_error($c));  
-
-
-
-
+$c = new mysqli($s,$u,$p,'transolicar');
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
 
 ?>

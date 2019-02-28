@@ -39,9 +39,9 @@ $sql = "SELECT * FROM usuarios where (rol = ".$perfil." $or) and (nombre like '%
 
 }
 
-$datos = mysql_query($sql,$c);
+$datos = mysqli_query($c,$sql);
 
-while($ren = mysql_fetch_array($datos)){
+while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
 $cadena = $cadena. '<tr>
     <td>'.$ren['nombre'].'</td>

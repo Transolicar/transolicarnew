@@ -1,5 +1,4 @@
 <?php
-
 header('Content-Type: text/html; charset=UTF-8');
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);

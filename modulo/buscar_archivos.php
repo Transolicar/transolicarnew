@@ -33,11 +33,11 @@ require('conectar.php');
 
 $sql = "SELECT * FROM documentos where ".$tipo_str." id_usuario = ".$usuario." ".$plus." ";
 
-$datos = mysql_query($sql,$c);
+$datos = mysqli_query($c,$sql);
 
 $cadena = '<div class="col-md-3"><ul class="media-list">';
 
-if(mysql_num_rows($datos)==0){
+if(mysqli_num_rows($datos)==0){
 
 $cadena = $cadena. '<li class="media">
   <div class="media-body">
@@ -50,7 +50,7 @@ $cadena = $cadena. '<li class="media">
 
 }else{
 
-while($ren = mysql_fetch_array($datos)){
+while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
  $nombre_tipo = tipo($ren['id_tipo']);
 

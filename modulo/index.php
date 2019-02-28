@@ -1,13 +1,6 @@
-
 <?
 session_start();
-
-
-
 if(isset($_SESSION['transolicar'])){
-
-
-
 echo "<script>location.href='inicio.php'</script>";
 }
 ?>

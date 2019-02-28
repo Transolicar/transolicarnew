@@ -17,9 +17,9 @@ require('conectar.php');
 
 $sql = "SELECT * FROM usuarios where id = ".$_GET['id'];
 
-$datos = mysql_query($sql,$c);
+$datos = mysqli_query($c,$sql);
 
-      while($ren = mysql_fetch_array($datos)){
+      while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
         $rol = $ren['rol'];
         $usuario = $ren['id'];
         $perfil = $ren['nombre'];

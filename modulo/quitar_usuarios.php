@@ -34,9 +34,9 @@ foreach ($arrayUsuarios as $key => $value) {
 
 			$sql = "SELECT * FROM usuarios where id = $value";
 
-			$datos = mysql_query($sql,$c); 
+			$datos = mysqli_query($c,$sql); 
 
-			while ($ren = mysql_fetch_array($datos)){
+			while ($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
 
 				if($id != $ren['id']){
 

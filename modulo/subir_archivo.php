@@ -129,7 +129,7 @@ if (!file_exists('archivos/'.$id_usuario."/".$tipo."/".$ano)) {
 			    
 		          }
 	
-		             if(mysql_query($sql,$c))
+		             if(mysqli_query($c,$sql))
 		             {
 				$cadenAlert = $cadenAlert. "Usuario: ".$id_usuario. " - Exitoso.  \\n";
 			     }
@@ -174,7 +174,7 @@ if (!file_exists('archivos/'.$id_usuario."/".$tipo."/".$ano)) {
                                               $sql = "INSERT INTO documentos (id_usuario,id_tipo,mes,ano,link,descargas,estado,disponible)
                                                       VALUES (".$id_usuario.",".$tipo.",".$mes.",".$ano.",'archivos/".$id_usuario."/".$tipo."/".$ano."/".$mes."/".$nombre."',0,0,1)";
 
-                                                     if(mysql_query($sql,$c)){
+                                                     if(mysqli_query($c,$sql)){
 
                                                         $cadenAlert = $cadenAlert. "Usuario: ".$id_usuario. " - Exitoso por aqui es 2. \\n";
 
@@ -227,7 +227,7 @@ if (!file_exists('archivos/'.$id_usuario."/".$tipo."/".$ano)) {
 			    
 		          }
 	
-		             if(mysql_query($sql,$c))
+		             if(mysqli_query($c,$sql))
 		             {
 				$cadenAlert = $cadenAlert. "Usuario: ".$id_usuario. " - Exitoso.  \\n";
 			     }
@@ -260,7 +260,7 @@ if (!file_exists('archivos/'.$id_usuario."/".$tipo."/".$ano)) {
                                       $sql = "INSERT INTO documentos (id_usuario,id_tipo,mes,ano,link,descargas,estado,disponible)
                                                       VALUES (".$id_usuario.",".$tipo.",".$mes.",".$ano.",'archivos/".$id_usuario."/".$tipo."/".$ano."/".$mes."/".$nombre."',0,0,1)";
 
-                                                     if(mysql_query($sql,$c)){
+                                                     if(mysqli_query($c,$sql)){
 
                                                         $cadenAlert = $cadenAlert. "Usuario: ".$id_usuario. " - Exitoso. por aqui es 4\\n";
 

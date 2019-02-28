@@ -1,26 +1,16 @@
 <?php
 session_start();
-
 $tipo_rol = 0;
-
 require('conectar.php');
-
 $sql = "SELECT * FROM usuarios where correo = '".$_SESSION['transolicar']."'";
-
-$datos = mysql_query($sql,$c);
-
-      while($ren = mysql_fetch_array($datos)){
+$datos = mysqli_query($c,$sql);
+      while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
         $rol = $ren['rol'];
         $usuario = $ren['id'];
         if($ren['rol'] != $tipo_rol){
-
           echo "<script>location.href='index.php'</script>";
-
         }
-
       }
-
-
 $perfil = $_GET['rol'];
 $id_usuario = $_GET['id_usuario'];
 
@@ -41,9 +31,9 @@ if($perfil == NULL){
 
       $sqla = "SELECT * FROM usuarios where id = ".$id_usuario;
 
-      $datosa = mysql_query($sqla,$c);
+      $datosa = mysqli_query($c,$sqla);
 
-            while($rena = mysql_fetch_array($datosa)){
+            while($rena = mysqli_fetch_array($datosa,MYSQLI_ASSOC)){
               $perfil = $rena['rol'];
 
             }

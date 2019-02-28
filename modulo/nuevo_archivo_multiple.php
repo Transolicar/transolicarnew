@@ -7,9 +7,9 @@ require('conectar.php');
 
 $sql = "SELECT * FROM usuarios where correo = '".$_SESSION['transolicar']."'";
 
-$datos = mysql_query($sql,$c);
+$datos = mysqli_query($c,$sql);
 
-      while($ren = mysql_fetch_array($datos)){
+      while($ren = mysqli_fetch_array($datos,MYSQLI_ASSOC)){
         $rol = $ren['rol'];
         $usuario = $ren['id'];
         if($ren['rol'] != $tipo_rol){
@@ -41,9 +41,9 @@ if($perfil == NULL){
 
       $sqla = "SELECT * FROM usuarios where id = ".$id_usuario;
 
-      $datosa = mysql_query($sqla,$c);
+      $datosa = mysqli_query($c,$sqlc);
 
-            while($rena = mysql_fetch_array($datosa)){
+            while($rena = mysqli_fetch_array($datos,MYSQLI_ASSOCa)){
               $perfil = $rena['rol'];
 
             }
