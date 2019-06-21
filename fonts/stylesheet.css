@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('Aller-Bold.eot');
+    src: url('Aller-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Aller-Bold.woff2') format('woff2'),
+        url('Aller-Bold.woff') format('woff'),
+        url('Aller-Bold.ttf') format('truetype'),
+        url('Aller-Bold.svg#Aller-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('Aller.eot');
+    src: url('Aller.eot?#iefix') format('embedded-opentype'),
+        url('Aller.woff2') format('woff2'),
+        url('Aller.woff') format('woff'),
+        url('Aller.ttf') format('truetype'),
+        url('Aller.svg#Aller') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,11 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('../fonts/stylesheet.css');
 
 body,html{
     
     height:100%;
     width:100%;
-    font-family: 'Oswald';
+    font-family: 'Aller';
     
+}
+
+.row {
+	margin: 0;
+}
+
+.navbar-right li a {
+	border-right: 1px solid #e8e8e8;
+}
+
+.input-group-addon {
+	border: none;
+	background: none;
+	color: #666;
+}
+
+.form-control {
+	border-radius: 0px;
+}
+
+.form-contact{
+	border:2px solid #cecece; 
+	border-radius: 10px;
+	padding: 15px;
+  overflow: hidden;
+}
+.btn-local p {
+	font-size: 12px;
+}
+
+.ubicacion{
+	max-width: 150%;
+}
+
+.back-gray {
+	background: #ececec;
+	z-index: -1;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+
+.logom{
+	max-width: 300px;
+	margin-top:5px;
 }
 
 .height100{
@@ -23,6 +70,7 @@ body,html{
 .btn-local{
 
 	cursor:pointer;
+	min-height: 120px;
 
 }
 
@@ -33,18 +81,14 @@ body,html{
 
 .navbar-inverse{
 
-	height: 120px;
+	height:80px;
     background: white;
     box-shadow: 0px 5px 6px rgba(102, 102, 102, 0.65);
     border:none;
 	border-top: 5px solid #337ab7;
 }
 
-.navbar-nav{
 
-	margin-top: 20px;
-
-}
 .navbar-nav li a{
 padding-top:3rem;
 font-size:17px;
@@ -106,28 +150,25 @@ margin-top: 20px;
 
 .forma{
 
-	border:2px solid #0072BC;
-	border-radius: 5px; 
-	color: #0072BC;
-	margin-bottom: 5px;
-	padding: 3px;
+    color: #8c8c8c;
+    margin-bottom: 5px;
+    padding: 3px;
 
 }
 
 .forma input{
 
-		background:none;
+		background:#ececec;
 		outline: none;
 		border:none;
 		color: #666;
-
+		height: 30px;
+		width: 80%;
 }
 
 .formatext{
 
-	border:2px solid #0072BC;
-	border-radius: 5px; 
-	color: #0072BC;
+	color: #8c8c8c;
 	margin-bottom: 5px;
 	padding: 3px;
 
@@ -135,13 +176,13 @@ margin-top: 20px;
 
 .formatext textarea{
 
-		background:none;
+		background:#ececec;
 		outline: none;
 		border:none;
 		color: #666;
 		resize:none;
-		height: 100px;
-
+		height: 60px;
+		width:100%;
 }
 
 .forma > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -158,7 +199,7 @@ margin-top: 20px;
 }
 
 .btn-azul-neutro{
-
+		border-radius: 0;
 		background: #0072BC;
 		color:white;
 
@@ -182,9 +223,13 @@ margin-top: 20px;
 
 }
 
-.blue{
+.back-blue{
+	background:#004D95;
+}
 
-	background:#0060ab;
+
+.blue{
+	background:#004D95;
 	color:white;
 	padding: 20px 0 20px;
 	
@@ -192,8 +237,16 @@ margin-top: 20px;
 
 .fore-blue{
 	
-	color:#0060ab;
+	color:#004D95;
 
+}
+
+.fore-bluelight{
+	color:#0082C5;
+}
+
+.back-bluelight{
+	background: #0082C5;
 }
 
 .texture{
@@ -221,6 +274,33 @@ p{
 	
 color:white;
 
+}
+
+.title-service {
+	background: #0082C5;
+	color: white;
+	padding: 10px;
+	font-size: 18px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.padding0{
+	padding: 0;
+}
+
+.back-white{
+	background:white;
+}
+.bold{
+	font-weight: bold;
+}
+
+.stunning div{
+	font-size: 18px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .gray{
@@ -267,9 +347,25 @@ a.navbar-brand {
 }
 
 /*responsive*/
+@media (max-width: 1200px) {
+	.btn-local{
+
+		min-height:150px;
+	
+	}
+	
+}
+
+
 
 @media (max-width: 768px) {
 
+	.ubicacion{
+		
+		max-width: 80%;
+		max-height:70%;
+	}
+	
 
 		#navbar{
 
@@ -291,6 +387,27 @@ a.navbar-brand {
 
 		}
 
+		.btn-local{
+
+			cursor:pointer;
+			min-height: auto;
+		
+		}
 		
 
+}
+
+@media (min-width: 768px) and (max-width: 1090px) {
+	.navbar-collapse.collapse {
+			display: none !important;
+	}
+	.navbar-collapse.collapse.in {
+			display: block !important;
+	}
+	.navbar-header .collapse, .navbar-toggle {
+			display:block !important;
+	}
+	.navbar-header {
+			float:none;
+	}
 }

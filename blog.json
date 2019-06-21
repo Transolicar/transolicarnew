@@ -1,0 +1,61 @@
+[
+  {
+      "id":0,
+      "titulo":"Evento de integración",
+      "cuerpo":"<b> <strong>Evento de Integración Santa Marta 2017. </strong> </b>"
+  },
+    {
+        "id":1,
+        "titulo":"Evento de integración",
+        "cuerpo":"<b> <strong>Evento de Integración Aratoca 2018. </strong> </b>"
+    },
+    {
+        "id":2,
+        "titulo":"Dia del niño ",
+        "cuerpo":" <b> Dia de los niños 2018. Es gratificante ser parte del aprendizaje de cnuestros niños.</b>"
+    },
+    {
+        "id":3,
+        "titulo":"Talento humano",
+        "cuerpo":"<b>  Trabajamos por el bienestar de nuestros trabajadores.  </b>"
+    },
+    {
+  "id":9,
+  "titulo":"Celebración Amor y amistad",
+  "cuerpo":" <b> La familia transolicar celebra el dia de amor y amistad, mostrando un gran gesto de union y compañerismo.</b>"
+   },
+    {
+        "id":4,
+        "titulo":"Evento de Integración",
+        "cuerpo":" <b> Evento de integración Aratoca 2018</b>"
+    },
+    {
+        "id":5,
+        "titulo":"XIX Congreso Nacional Avicola",
+        "cuerpo":" <b> Fenavi septiembre de 2018 - Centro de convenciones CENFER Bucaramanga. </b>"
+    },
+
+    {
+        "id":7,
+        "titulo":"XIX Congreso Nacional Avicola",
+        "cuerpo":" <b> Fenavi septiembre de 2018 - Centro de convenciones CENFER Bucaramanga.</b>"
+    },
+    {
+        "id":10,
+        "titulo":"Evento conductores Buenaventura",
+        "cuerpo":" <b> Evento conductores Buenaventura 2019.</b>"
+    },
+
+    {
+        "id":6,
+        "titulo":"Premiación 2018",
+        "cuerpo":" <b> Evento de Premiación mejores conductores 2018, por su fidelidad y compromiso con la empresa.</b>"
+    },
+    {
+        "id":8,
+        "titulo":"Mejor Conductor 2018",
+        "cuerpo":" <b>Queremos agradecer a nuestros conductores por mantener nuestra compañía en movimiento, siendo el motor que nos impulsa.</b>"
+    }
+
+
+]

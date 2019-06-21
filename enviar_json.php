@@ -7,7 +7,7 @@ $email = $request->email;
 $asunto = $request->asunto;
 $mensaje = $request->comentario;
 
-$destinatario = "lyda.barragam@transolicar.com";
+$destinatario = "recepcion@transolicar.com";
 //$destinatario = "jota5557@yahoo.es";
 
 $cuerpo = "

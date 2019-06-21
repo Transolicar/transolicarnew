@@ -16,6 +16,7 @@ angular.module("transolicar",['angular-loading-bar','ngSanitize','duScroll'])
         $rootScope.nosactivo = "";
         $rootScope.seractivo = "";
         $rootScope.preactivo = "";
+        $rootScope.novactivo = "";
         $rootScope.polactivo = "";
         $rootScope.conactivo = "";
         
@@ -37,6 +38,7 @@ angular.module("transolicar",['angular-loading-bar','ngSanitize','duScroll'])
         $rootScope.nosactivo = "";
         $rootScope.seractivo = "";
         $rootScope.preactivo = "";
+        $rootScope.novactivo = "";
         $rootScope.polactivo = "";
         $rootScope.conactivo = "";
             

@@ -1,58 +1,70 @@
 <section id="inicio" class="slider">
 
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
-	  <!-- Indicators -->
+		<!-- Indicators -->
 
 
-	  <ol class="carousel-indicators">
+<ol class="carousel-indicators">
 	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 	    <li data-target="#myCarousel" data-slide-to="1"></li>
-
+		<li data-target="#myCarousel" data-slide-to="2"></li>
 	  </ol>
 
-	  <!-- Wrapper for slides -->
-	 <div class="carousel-inner">
-	    <div class="item active">
-	      <img src="img/sliders/slider1.jpg" class="img-responsive center-block">
-	    </div>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active"
+				style="background:url(img/sliders/slider1.jpg) center center no-repeat; background-size: cover; height:500px;">
+			</div>
+			<div class="item"
+				style="background:url(img/sliders/slider2.jpg) center center no-repeat; background-size: cover; height:500px;">
+			</div>
+			<div class="item"
+				style="background:url(img/sliders/slider3.jpg) center center no-repeat; background-size: cover; height:500px;">
+			</div>
+		</div>
+		<!-- Left and right controls -->
 
-	    <div class="item">
-	      <img src="img/sliders/slider1.jpg" class="img-responsive center-block">
-	    </div>
- </div>
-	  <!-- Left and right controls -->
 
-
-	  <a class="left carousel-control" href="#myCarousel" data-target="#myCarousel" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left"></span>
+<a class="left carousel-control" href="#myCarousel" data-target="#myCarousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" style="background:none;"></span>
 	    <span class="sr-only">Previous</span>
 	  </a>
 	  <a class="right carousel-control" href="#myCarousel" data-target="#myCarousel" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right"></span>
+	    <span class="glyphicon glyphicon-chevron-right" style="background:none;"></span>
 	    <span class="sr-only">Next</span>
 	  </a>
+
 	</div>
 
 	<script>
-	$("a.carousel-control").click(function(e){
-	    e.preventDefault();
-	    $(this).parent().carousel($(this).data("slide"));
-	});
-
+		$("a.carousel-control").click(function (e) {
+			e.preventDefault();
+			$(this).parent().carousel($(this).data("slide"));
+		});
 	</script>
-
-		<div class="row base">
-
-
-
-				<p  class=" text-center hidden-xs">
-				<img src="img/sbs.jpg" align="absmiddle" style="width: 60px;"> <strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
-				</p>
-
-				<p  class=" text-center hidden-md hidden-lg hidden-sm">
-				<img src="img/sbs.jpg" align="absmiddle" style="width: 100px; margin-bottom:5px;"><br><strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
-				</p>
-
-
+</section>
+<section class="back-blue ">
+	<div class="container">
+		<div class="row stunning">
+			<div class="col-md-4 text-center fore-white">MONITOREO </div>
+			<div class="col-md-2 text-center back-white fore-blue"><a href="http://www.destinoseguro.net/scl/index.php" target="_blank" class="fore-gray bold">INGRESAR</a></div>
+			<div class="col-md-4 text-center fore-white"> ENTURNAMIENTO </div>
+			 <div class="col-md-2 text-center back-white"><a href="http://www.turnador.com/login" target="_blank" class="fore-gray bold">ACCESO</a></div>
 		</div>
+	</div>
+
+<div class="row base">
+
+
+
+			<p  class=" text-center hidden-xs">
+			<img src="img/sbs.jpg" align="absmiddle" style="width: 60px;"> <strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
+			</p>
+
+			<p  class=" text-center hidden-md hidden-lg hidden-sm">
+			<img src="img/sbs.jpg" align="absmiddle" style="width: 100px; margin-bottom:5px;"><br><strong>TRANSOLICAR SAS</strong>, cuenta con el respaldo de <strong>SBS SEGUROS</strong>.
+			</p>
+
+
+	</div>
 </section>
