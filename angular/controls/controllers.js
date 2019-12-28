@@ -343,7 +343,7 @@ angular.module("transolicar")
           break;
 
         case 'medellin':
-          linked = "https://www.google.com/maps/d/u/0/embed?mid=111i_gAhjS1MIFMMOmzqSYsHBQXnXZLGn";
+          linked = "https://www.google.com/maps/d/u/0/embed?mid=1WrqZkNHbWNUOzTWP6LyMD3PDhnAMEVNx";
           break;
         case 'Duitama':
           linked = "https://www.google.com/maps/d/u/0/embed?mid=1eoepMcsd67mhDt73jtkfU0Z5t9n_mfxL";
