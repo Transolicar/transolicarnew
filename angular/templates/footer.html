@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<div class="section relative">
+    <h2 class="text-center">Síguenos en Instagram</h2>
+        {{msg}}
+        <div class="row">
+         <div class="col-md-2 col-sm-3 col-xs-4 padding0 postinsta" ng-show="$index < 6" ng-repeat="post in _recents" style="background:url({{post.display}}) center center no-repeat; background-size:cover; height:200px" ng-click="openurl($index)">
+               <div class="hover-shadow">{{post.caption}}</div>
+        </div>    
+        </div>
+       
+    <a href="https://www.instagram.com/transolicarsas/" target="_blank" class="ver_mas-btn">Ver más</a>
+    </div>
+    <a class="wap" href="https://wa.me/573174375730" title="Escríbenos" target="_blank"><img src="img/whatsapp.png" width="50px"></a>
 <footer class="relative">
     <section class="back-bluelight fore-white">
         <br />

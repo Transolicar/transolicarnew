@@ -346,6 +346,59 @@ a.navbar-brand {
     padding: 0 !important;
 }
 
+
+
+.ver_mas-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    background: #0060ab;
+    color: white;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.ver_mas-btn:hover {
+    background: white ;
+    color:#0060ab;
+}
+
+.postinsta:hover .hover-shadow{
+    visibility: visible;
+}
+.hover-shadow {
+    background: rgba(0, 96, 171, 0.72);
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+    visibility: hidden;
+    cursor:pointer;
+    height: 200px;
+}
+.hover-shadow:hover{
+    visibility: visible;
+}
+
+.padding0{
+    padding:0;
+}
+
+.wap{
+    position: fixed;
+    right:10px;
+    bottom:20%;
+    z-index: 2;
+    cursor:pointer;
+    width:50px;
+}
+
+
 /*responsive*/
 @media (max-width: 1200px) {
 	.btn-local{

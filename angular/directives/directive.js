@@ -7,7 +7,8 @@ angular.module("transolicar")
 })
 .directive('foot', function() {
   return {
-    templateUrl: 'angular/templates/footer.html'
+    templateUrl: 'angular/templates/footer.html',
+    controller:'footer'
   };
 })
 .directive('contacto', function() {

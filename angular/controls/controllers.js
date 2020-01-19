@@ -564,4 +564,40 @@ angular.module("transolicar")
     $rootScope.polactivo = "active";
 
 
+  }]).controller("footer",["$scope","$http","$rootScope", function($scope,$http,$rootScope){
+    _url ="https://www.instagram.com/transolicarsas/?__a=1";
+    $scope._recents = [];   
+   data = null;
+  $http.get(_url, data)
+                           .then(function (data) {
+                              data = data.data
+                                var _timeline = data['graphql'];
+                                        _timeline = _timeline['user'];
+                                        _timeline = _timeline['edge_owner_to_timeline_media'];
+                                        _timeline = _timeline['edges'];
+                                      
+                                  for(const prop in _timeline){
+                                      _post = _timeline[prop];
+                                      var _postRecent = [];
+                                      _postRecent['caption'] = _post['node']['edge_media_to_caption']['edges'][0]['node']['text'];
+                                      _postRecent['display'] =  _post['node']['display_url'];
+                                      _postRecent['url'] = _post['node']['shortcode'];
+                                      $scope._recents.push(_postRecent);
+                                   }
+      
+      console.log($scope._recents);
+  
+                          })
+                           .catch(function (e) {
+  
+                             $scope.msg ="Ha ocurrido un error al obtener Instagram."+e;
+                             $scope.alerta = "text-danger";
+  
+                           });
+      
+      $scope.openurl = function(_index){
+      _url = "https://instagram.com/p/"+$scope._recents[_index].url;    
+      window.open(_url, '_blank','heigth=600,width=600');   // may alse try $window
+  } 
   }]);
+  
