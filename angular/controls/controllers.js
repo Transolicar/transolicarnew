@@ -429,7 +429,7 @@ angular.module("transolicar")
       method: 'GET',
       url: 'blog.json'
     }).then(function successCallback(response) {
-      //console.log(response);
+
       $scope.entradas = response.data;
       setTimeout(function() {
 
@@ -444,7 +444,8 @@ angular.module("transolicar")
 
     $scope.blog = {
       "titulo": '',
-      "cuerpo": ''
+      "cuerpo": '',
+      "galeria": null
     }
     $scope.abierto = 0;
     $scope._entrada = function(num) {
@@ -454,10 +455,12 @@ angular.module("transolicar")
       }
 
       $scope.entradas.forEach(function(ele) {
-        console.log(ele);
+    
         if (ele.id == num) {
+          $scope.blog.id = ele.id;
           $scope.blog.titulo = ele.titulo;
           $scope.blog.cuerpo = ele.cuerpo;
+          $scope.blog.galeria = ele.galeria;
         }
       });
     }
@@ -585,7 +588,7 @@ angular.module("transolicar")
                                       $scope._recents.push(_postRecent);
                                    }
       
-      console.log($scope._recents);
+  
   
                           })
                            .catch(function (e) {

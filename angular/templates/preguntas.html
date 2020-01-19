@@ -353,7 +353,7 @@
       <hr />
     </div>
   </section>
-
+<section>
   <div class="container preguntas-carousel">
     <h1 class="fore-bluelight bold">NOVEDADES Y EVENTOS</h1>
 
@@ -380,6 +380,11 @@
         <h1 class="bold fore-bluelight text-center">{{blog.titulo}}</h1>
         <br />
         <div ng-bind-html="blog.cuerpo"></div>
+        <div class="col-md-2 col-sm-3 col-xs-4" ng-show="blog.galeria" ng-repeat="foto in blog.galeria" >
+          <a href="img/blog/galeria{{blog.id}}/{{foto.imagen}}" data-lightbox="{{blog.id}}" data-title="{{ foto.pie || blog.titulo}}">
+                  <img ng-src="img/blog/galeria{{blog.id}}/{{foto.imagen}}" class="img-responsive">
+          </a>
+        </div>
       </div>
     </div>
   </div>
